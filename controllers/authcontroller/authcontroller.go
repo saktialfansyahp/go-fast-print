@@ -7,7 +7,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/saktialfansyahp/go-rest-api/config"
-	"github.com/saktialfansyahp/go-rest-api/helper"
 	"github.com/saktialfansyahp/go-rest-api/models"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
@@ -59,45 +58,6 @@ func Login(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "login success", "data": user, "token": token})
 }
 
-// func Register(w http.ResponseWriter, r *http.Request) {
-// 	var userInput models.AuthRequest
-// 	decoder := json.NewDecoder(r.Body)
-// 	if err := decoder.Decode(&userInput); err != nil {
-// 		response := map[string]string{"message": err.Error()}
-// 		helper.ResponseJSON(w, http.StatusBadRequest, response)
-// 		return
-// 	}
-// 	defer r.Body.Close()
-
-// 	hashPassword, _ := bcrypt.GenerateFromPassword([]byte(userInput.Password), bcrypt.DefaultCost)
-// 	userInput.Password = string(hashPassword)
-
-// 	var role models.Role
-// 	if err := models.DB.First(&role, userInput.RoleID).Error; err != nil {
-// 		response := map[string]string{"message": err.Error()}
-// 		helper.ResponseJSON(w, http.StatusBadRequest, response)
-// 		return
-// 	}
-
-// 	user := models.User{
-// 		Name: userInput.Name,
-// 		Username: userInput.Username,
-// 		Password: userInput.Password,
-// 		RoleID: userInput.RoleID,
-// 		Role: role,
-// 	}
-
-// 	if  err := models.DB.Create(&user).Error; err != nil {
-// 		response := map[string]string{"message": err.Error()}
-// 		helper.ResponseJSON(w, http.StatusInternalServerError, response)
-// 		return
-// 	}
-
-// 	response := map[string]interface{}{"message": "success", "data": user}
-// 	helper.ResponseJSON(w, http.StatusOK, response)
-
-// }
-
 func Register(c *gin.Context) {
 	var userInput models.AuthRequest
 
@@ -131,16 +91,8 @@ func Register(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "success", "data": user})
 }
 
-func Logout(w http.ResponseWriter, r *http.Request) {
-	http.SetCookie(w, &http.Cookie{
-		Name: "token",
-		Path: "/",
-		Value: "",
-		HttpOnly: true,
-	})
-
-	response := map[string]string{"message": "logout success"}
-	helper.ResponseJSON(w, http.StatusOK, response)
+func Logout(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{"message": "logout success"})
 }
 
 func Role(c *gin.Context) {

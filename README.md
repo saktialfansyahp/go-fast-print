@@ -26,8 +26,17 @@ Selamat datang di Proyek Go Rest Api! Proyek ini berisi implementasi backend unt
 
 # Endpoint
 
-1. GET /api/kategori Rute untuk mengambil data kategori.
-2. POST /api/kategori Rute untuk menambah data kategori.
+1. Rute untuk mengambil data kategori.
+
+   ```http
+   GET /api/kategori
+   ```
+
+2. Rute untuk menambah data kategori.
+
+   ```http
+   POST /api/kategori
+   ```
 
    Body (Json)
 
@@ -43,7 +52,11 @@ Selamat datang di Proyek Go Rest Api! Proyek ini berisi implementasi backend unt
    GET /api/status
    ```
 
-4. POST /api/status Rute untuk menambah data status.
+4. Rute untuk menambah data status.
+
+   ```http
+   POST /api/status
+   ```
 
    Body (Json)
 
@@ -53,8 +66,17 @@ Selamat datang di Proyek Go Rest Api! Proyek ini berisi implementasi backend unt
    }
    ```
 
-5. GET /api/produk Rute untuk mengambil data produk.
-6. POST /api/produk Rute untuk menambah data produk.
+5. Rute untuk mengambil data produk.
+
+   ```http
+   GET /api/produk
+   ```
+
+6. Rute untuk menambah data produk.
+
+   ```http
+   POST /api/produk
+   ```
 
    Body (Json)
 
@@ -67,7 +89,11 @@ Selamat datang di Proyek Go Rest Api! Proyek ini berisi implementasi backend unt
    }
    ```
 
-7. PUT /api/produk/:id Rute untuk mengubah data produk berdasarkan id.
+7. Rute untuk mengubah data produk berdasarkan id.
+
+   ```http
+   PUT /api/produk/:id
+   ```
 
    Body (Json)
 
@@ -80,6 +106,20 @@ Selamat datang di Proyek Go Rest Api! Proyek ini berisi implementasi backend unt
    }
    ```
 
-8. DELETE /api/produk/:id Rute untuk menghapus data produk berdasarkan id.
-9. GET /api/sale Rute untuk mengambil data produk yang bisa dijual.
-10. GET /api/produk/:id Rute untuk mengambil data produk berdasarkan id.
+8. Rute untuk menghapus data produk berdasarkan id.
+
+   ```http
+   DELETE /api/produk/:id
+   ```
+
+9. Rute untuk mengambil data produk yang bisa dijual.
+
+   ```http
+   GET /api/sale
+   ```
+
+10. Rute untuk mengambil data produk berdasarkan id.
+
+    ```http
+    GET /api/produk/:id
+    ```
