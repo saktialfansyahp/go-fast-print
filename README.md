@@ -28,23 +28,31 @@ Selamat datang di Proyek Go Rest Api! Proyek ini berisi implementasi backend unt
 
 1. GET /api/kategori Rute untuk mengambil data kategori.
 2. POST /api/kategori Rute untuk menambah data kategori.
+
    Body (Json)
+
    ```sh
    {
       "kategori": "Nama Kategori"
    }
    ```
+
 3. GET /api/status Rute untuk mengambil data status.
 4. POST /api/status Rute untuk menambah data status.
+
    Body (Json)
+
    ```sh
    {
       "nama_status": "Nama Status"
    }
    ```
+
 5. GET /api/produk Rute untuk mengambil data produk.
 6. POST /api/produk Rute untuk menambah data produk.
+
    Body (Json)
+
    ```sh
    {
       "nama_produk": "Nama Produk",
@@ -53,8 +61,11 @@ Selamat datang di Proyek Go Rest Api! Proyek ini berisi implementasi backend unt
       "status_id": "ID Status",
    }
    ```
+
 7. PUT /api/produk/:id Rute untuk mengubah data produk berdasarkan id.
+
    Body (Json)
+
    ```sh
    {
       "nama_produk": "Nama Produk",
@@ -63,6 +74,7 @@ Selamat datang di Proyek Go Rest Api! Proyek ini berisi implementasi backend unt
       "status_id": "ID Status",
    }
    ```
+
 8. DELETE /api/produk/:id Rute untuk menghapus data produk berdasarkan id.
 9. GET /api/sale Rute untuk mengambil data produk yang bisa dijual.
 10. GET /api/produk/:id Rute untuk mengambil data produk berdasarkan id.
