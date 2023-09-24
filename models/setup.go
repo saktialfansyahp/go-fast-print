@@ -1,8 +1,6 @@
 package models
 
 import (
-	"log"
-
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -10,22 +8,14 @@ import (
 var DB *gorm.DB
 
 func ConnectDatabase(){
-	dbURL := "postgres://default:xBTaUne1kOj2@ep-shrill-base-66245357.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb"
-
-    db, err := gorm.Open(postgres.Open(dbURL), &gorm.Config{})
-
-    if err != nil {
-        log.Fatalln(err)
+	dsn := "host=localhost user=postgres password=alfan12345 dbname=postgres port=5432"
+    db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+    
+    if err !=nil {
+        panic("failed to connect database")
     }
 
-	db.AutoMigrate(&User{}, &Role{}, &Product{}, &Category{}, &Subcategory{}, &Color{}, &Product_Color{})
-
-	sqlDB, err := db.DB()
-    if err != nil {
-        log.Fatal(err)
-    }
-	
-    sqlDB.Close()
+    db.AutoMigrate(&Produk{}, &Kategori{}, &Status{}, &Satuan{})
 
     DB = db
 }

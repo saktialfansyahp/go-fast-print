@@ -158,3 +158,14 @@ func Role(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{"message": "success", "data": userInput})
 }
+
+func GetRole(c *gin.Context) {
+	var role []models.Role
+
+	if err := models.DB.Find(&role).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"message": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"message": "success", "data": role})
+}
