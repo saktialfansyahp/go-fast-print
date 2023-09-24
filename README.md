@@ -26,13 +26,43 @@ Selamat datang di Proyek Go Rest Api! Proyek ini berisi implementasi backend unt
 
 # Endpoint
 
-1. GET /home: Rute untuk halaman beranda.
-2. POST /login: Rute untuk melakukan login pengguna.
-3. POST /register: Rute untuk mendaftarkan pengguna baru.
-4. GET /logout: Rute untuk melakukan logout pengguna.
-5. POST /role: Rute untuk membuat peran baru.
-
-   Kemudian, Grup rute api untuk melindungi beberapa rute dengan middleware:
-
-6. GET /api/admin/product: Rute yang hanya dapat diakses oleh pengguna dengan peran "admin". Di sini Anda menggunakan middleware untuk memverifikasi peran pengguna.
-7. GET /api/user/productUser: Rute yang dapat diakses oleh pengguna dengan peran "admin" dan "user". Juga menggunakan middleware untuk verifikasi peran.
+1. GET /api/kategori Rute untuk mengambil data kategori.
+2. POST /api/kategori Rute untuk menambah data kategori.
+   Body (Json)
+   ```sh
+   {
+      "kategori": "Nama Kategori"
+   }
+   ```
+3. GET /api/status Rute untuk mengambil data status.
+4. POST /api/status Rute untuk menambah data status.
+   Body (Json)
+   ```sh
+   {
+      "nama_status": "Nama Status"
+   }
+   ```
+5. GET /api/produk Rute untuk mengambil data produk.
+6. POST /api/produk Rute untuk menambah data produk.
+   Body (Json)
+   ```sh
+   {
+      "nama_produk": "Nama Produk",
+      "harga": "Harga",
+      "kategori_id": "ID Kategori",
+      "status_id": "ID Status",
+   }
+   ```
+7. PUT /api/produk/:id Rute untuk mengubah data produk berdasarkan id.
+   Body (Json)
+   ```sh
+   {
+      "nama_produk": "Nama Produk",
+      "harga": "Harga",
+      "kategori_id": "ID Kategori",
+      "status_id": "ID Status",
+   }
+   ```
+8. DELETE /api/produk/:id Rute untuk menghapus data produk berdasarkan id.
+9. GET /api/sale Rute untuk mengambil data produk yang bisa dijual.
+10. GET /api/produk/:id Rute untuk mengambil data produk berdasarkan id.
