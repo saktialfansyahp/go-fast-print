@@ -37,7 +37,12 @@ Selamat datang di Proyek Go Rest Api! Proyek ini berisi implementasi backend unt
    }
    ```
 
-3. GET /api/status Rute untuk mengambil data status.
+3. Rute untuk mengambil data status.
+
+   ```http
+   GET /api/status
+   ```
+
 4. POST /api/status Rute untuk menambah data status.
 
    Body (Json)
