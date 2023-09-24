@@ -124,6 +124,85 @@ Selamat datang di Proyek Go Fast Print! Proyek ini berisi implementasi backend u
     GET /api/produk/:id
     ```
 
+## Header Custom yang Diberikan
+
+Website ini menggunakan beberapa header kustom yang perlu diperhatikan untuk pengelolaan permintaan HTTP. Berikut adalah beberapa header beserta penjelasan masing-masing:
+
+### Access-Control-Allow-Headers:
+
+Nilai: Content-Type, Authorization
+Keterangan: Header ini memungkinkan server untuk menerima permintaan yang memiliki header Content-Type dan Authorization.
+
+### Access-Control-Allow-Methods:
+
+Nilai: GET
+Keterangan: Header ini mengizinkan metode HTTP GET untuk digunakan dalam permintaan.
+
+### Access-Control-Allow-Origin:
+
+Nilai: http://localhost:8081
+Keterangan: Header ini mengizinkan akses permintaan dari domain yang diberikan (localhost pada port 8081).
+
+### Cache-Control:
+
+Nilai: no-cache, no-store, max-age=0, must-revalidate
+Keterangan: Header ini mengendalikan perilaku caching, memastikan konten tidak disimpan dalam cache.
+
+### Connection:
+
+Nilai: keep-alive
+Keterangan: Header ini mengindikasikan bahwa koneksi harus dijaga agar tetap terbuka setelah merespons permintaan.
+
+### Content-Type:
+
+Nilai: application/json; charset=utf-8
+Keterangan: Header ini memberikan informasi mengenai tipe konten yang dikirim dalam respons, yaitu JSON dengan pengodean karakter UTF-8.
+
+### Date:
+
+Nilai: Sun, 24 Sep 2023 15:07:22 GMT
+Keterangan: Header ini menunjukkan waktu saat respons HTTP dihasilkan.
+
+### Pragma:
+
+Nilai: no-cache
+Keterangan: Header ini menginstruksikan agen pengguna untuk tidak menggunakan cache saat memproses respons.
+
+### Server:
+
+Nilai: golang
+Keterangan: Header ini menyatakan server yang digunakan (GoLang dalam hal ini).
+
+### Set-Cookie:
+
+Nilai: ci_session=sXhNYptpnUXQZUBk9uacp3g95X08cUGvK1tBkDq2hu4=; Path=/; Expires=Session; HttpOnly;
+Keterangan: Header ini digunakan untuk mengirim informasi tentang cookie yang harus diatur pada sisi klien.
+
+### Strict-Transport-Security:
+
+Nilai: max-age=31536000
+Keterangan: Header ini menginstruksikan browser untuk selalu menggunakan HTTPS selama periode waktu tertentu (dalam detik).
+
+### Transfer-Encoding:
+
+Nilai: chunked
+Keterangan: Header ini mengindikasikan bahwa konten dikirim dalam bagian-bagian "chunked".
+
+### X-Credentials-Username:
+
+Nilai: tesprogrammer230923C02
+Keterangan: Header ini menampilkan nama pengguna yang dihasilkan secara dinamis berdasarkan waktu server.
+
+### X-Credentials-Password:
+
+Nilai: md5 dari = bisacoding-'tanggal sekarang (angka)'-'bulan sekarang (angka)'-'2 digit terakhir tahun sekarang (angka)'
+Keterangan: Header ini menyediakan informasi terenkripsi terkait kata sandi.
+
+### X-Powered-By:
+
+Nilai: it-programmer
+Keterangan: Header ini memberikan informasi tentang teknologi yang digunakan untuk menggerakkan website ini.
+
 # Note
 
 Pastikan untuk menjalankan server backend terlebih dahulu
