@@ -15,7 +15,21 @@ Selamat datang di Proyek Go Fast Print! Proyek ini berisi implementasi backend u
 
    ```
 
-5. Setelah dependensi terinstal, jalankan perintah berikut untuk memulai server:
+5. Import SQL
+
+   Import SQL dengan nama fastprint.sql ke dalam database postgreSQL
+
+6. Konfigurasi PostgreSQL (Golang)
+
+   Untuk menyesuaikan konfigurasi PostgreSQL pada proyek Golang menggunakan GORM:
+
+   1. Gantilah variabel dsn pada file setup.go dengan konfigurasi yang sesuai:
+
+      ```sh
+      dsn := "host=your_host user=your_user password=your_password dbname=your_db port=5432 sslmode=disable TimeZone=Asia/Jakarta"
+      ```
+
+7. Setelah dependensi terinstal, database telah di konfigurasi lalu jalankan perintah berikut untuk memulai server:
 
    ```sh
 
