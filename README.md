@@ -219,4 +219,6 @@ Keterangan: Header ini memberikan informasi tentang teknologi yang digunakan unt
 
 # Note
 
+Untuk menambahkan kategori dan status dilakukan dengan melakukan POST data melalui postman. Hal tersebut diperlukan karena dalam view Vue JS saya tidak membuat fitur untuk mengelola kategori dan status
+
 Pastikan untuk menjalankan server backend terlebih dahulu
