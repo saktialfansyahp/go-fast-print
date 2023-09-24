@@ -123,3 +123,7 @@ Selamat datang di Proyek Go Fast Print! Proyek ini berisi implementasi backend u
     ```http
     GET /api/produk/:id
     ```
+
+# Note
+
+Pastikan untuk menjalankan server backend terlebih dahulu
