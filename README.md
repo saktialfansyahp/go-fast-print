@@ -23,11 +23,11 @@ Selamat datang di Proyek Go Fast Print! Proyek ini berisi implementasi backend u
 
    Untuk menyesuaikan konfigurasi PostgreSQL pada proyek Golang menggunakan GORM:
 
-   1. Gantilah variabel dsn pada file setup.go dengan konfigurasi yang sesuai:
+   Gantilah variabel dsn pada file setup.go dengan konfigurasi yang sesuai:
 
-      ```sh
-      dsn := "host=your_host user=your_user password=your_password dbname=your_db port=5432 sslmode=disable TimeZone=Asia/Jakarta"
-      ```
+   ```sh
+   dsn := "host=your_host user=your_user password=your_password dbname=your_db port=5432 sslmode=disable TimeZone=Asia/Jakarta"
+   ```
 
 7. Setelah dependensi terinstal, database telah di konfigurasi lalu jalankan perintah berikut untuk memulai server:
 
